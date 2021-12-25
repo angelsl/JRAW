@@ -104,4 +104,12 @@ public abstract class PublicContribution extends Contribution implements Disting
     public String getRemovalReason() {
         return data("removal_reason");
     }
+
+    /**
+     * Returns whether the author is blocked by the user.
+     */
+    @JsonProperty
+    public boolean isAuthorBlocked() {
+        return data("author_is_blocked", Boolean.class);
+    }
 }
